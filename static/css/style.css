@@ -1,0 +1,65 @@
+html{
+    font-family: arial,"Hiragino Sans GB", "Microsoft YaHei","微軟正黑體","儷黑 Pro", sans-serif;
+}
+.toast {
+    position: fixed;
+    top: 80%;
+    left: 50%;
+    z-index: 11000;
+    width: auto;
+    padding: 0.5rem;
+    line-height: 1rem;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 1rem;
+    color: white;
+    background: rgba(0, 0, 0, 0.7);
+    display: none;
+}
+
+.toast-show {
+    animation: animate-toastShow ease 300ms;
+}
+
+.toast-hide {
+    animation: animate-toastShow ease 500ms;
+}
+
+@keyframes animate-toastShow {
+    0% {
+        opacity: 0;
+        transform: translate3d(0, 0, 0) scale(0);
+    }
+    100% {
+        opacity: 1;
+        transform: translate3d(0, 0, 0) scale(1);
+    }
+}
+
+@keyframes animate-toastHide {
+    0% {
+        opacity: 1;
+        transform: translate3d(0, 0, 0) scale(1);
+    }
+    100% {
+        opacity: 0;
+        transform: translate3d(0, 0, 0) scale(0);
+    }
+}
+
+.header {
+    padding: 2rem 0;
+    font-size: 1.5rem;
+    font-weight: normal;
+}
+
+.content {
+    padding: 0.5rem;  
+    font-size: 1rem;
+    line-height: 1.5rem;
+    font-weight: normal;
+}
+
+body{
+    color: #333;
+}

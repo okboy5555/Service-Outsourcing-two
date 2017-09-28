@@ -1,0 +1,10 @@
+import topbar from './topbar'
+import footer from './footer'
+import nav from './nav'
+import content from './content'
+import item from './item'
+import status from './status'
+import loading from './loading'
+import tip from './tip'
+import header from './header'
+export default { topbar, nav, footer, header, content, item, status, loading, tip }

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>evaluate</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+    <meta name="screen-orientation" content="portrait">
+    <meta name="x5-orientation" content="portrait">
+    <link href="/static/css/reset.css" rel="stylesheet">
+    <link href="/static/fonts/iconfont.css" rel="stylesheet">
+    <link href="/static/css/style.css" rel="stylesheet">
+    <script src="/static/js/jquery-3.2.0.min.js"></script>
+    <script src="/static/js/index.js"></script>
+    <script src="http://localhost:3000/socket.io/socket.io.js"></script>
+    <script>var socket = io('http://localhost:3000');</script>
+  </head>
+  <style>
+    .app-loading {
+      position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 9999;
+      max-width: 640px;
+      margin: auto;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+      -moz-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      -webkit-box-pack: center;
+      -webkit-justify-content: center;
+      -moz-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-transition: all 0.3s;
+      -o-transition: all 0.3s;
+      -moz-transition: all 0.3s;
+      transition: all 0.3s;
+      background: #3897ff;
+    }
+
+
+
+    .app-loading-hide {
+      display: none;
+    }
+
+    
+    .line {
+        display: inline-block;
+        width: 15px;
+        height: 15px;
+        border-radius: 15px;
+        background-color: #fff;
+    }
+
+    .load-1 .line:nth-last-child(1) {animation: loadingA 1.5s 1s infinite;}
+    .load-1 .line:nth-last-child(2) {animation: loadingA 1.5s .5s infinite;}
+    .load-1 .line:nth-last-child(3) {animation: loadingA 1.5s 0s infinite;}
+
+    @keyframes loadingA {
+      0 {height: 15px;}
+      50% {height: 35px;}
+      100% {height: 15px;}
+    }
+
+
+  </style>
+  <body>
+    <div class="app-loading">
+       <div class="load-1">
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+      </div>
+    </div>
+    <div id="app"></div>
+    
+    <!-- built files will be auto injected -->
+  </body>
+  <script>
+    var START_TIME = new Date().getTime();
+  </script>
+</html>
